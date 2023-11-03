@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+    padding: 2rem;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+main {
+    text-align: center;
+    padding: 2rem;
+}
+
+#download-button {
+    background-color: #cddb03;
+    padding: 1rem;
+    display: inline-block;
+    border-radius: 18%;
+
+}
+
+#download-button button {
+    background-color: #cddb03;
+    color: #000000;
+    padding: 0.5rem 1rem;
+    font-size: 2rem;
+    border: none;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-family: BlowMe;
+    border-radius: 18%;
+}
+
+#download-button button:hover {
+    background-color: #cddb03;
+    border-radius: 18%;
+}
+
+footer {
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+nav {
+    background-color: #000000;
+    overflow: hidden;
+    color: #cddb03;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav li {
+    float: left;
+}
+
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    background-color: #000000;
+}
+
+.jumbotron {
+    background-image: url('https://assetsio.reedpopcdn.com/borderlands-3-free-epic-games.jpg?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp');
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+    height: 450px;
+}
+
+nav ul li a {
+    color: yellow;
+    font-family: BlowMe;
+    font-size: 150%;
+}
+
+@font-face {
+    font-family: BlowMe;
+    src: url('BlowMePersonalUseRegular-g105.ttf');
+}
+
+
+.fourth {
+    // background: $yellow;
+    border-color: $yellow;
+    color: #fff;
+
+    background: {
+        image: linear-gradient(45deg, $yellow 50%, transparent 50%);
+        position: 100%;
+        size: 400%;
+    }
+
+    transition: background 300ms ease-in-out;
+
+    &:hover {
+        background-position: 0;
+    }
+}
