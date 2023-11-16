@@ -111,6 +111,20 @@ footer {
 }
 
 
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    border-radius: 8%;
+    background-color: transparent;
+    border: 1px solid transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: #dbd403;
+}
 
 
 
@@ -198,41 +212,7 @@ nav img {
     left: 0;
 }
 
-body::-webkit-scrollbar {
-    width: 12px;
-    /* Set the width of the scrollbar */
 
-}
-
-body::-webkit-scrollbar-thumb {
-    background: #dbd403;
-    /* Set the color of the scrollbar thumb */
-}
-
-body::-webkit-scrollbar-track {
-    background: black;
-    /* Set the color of the scrollbar track */
-
-}
-
-
-
-
-
-body::-webkit-scrollbar {
-    width: 10px;
-}
-
-body::-webkit-scrollbar-track {
-    border-radius: 8%;
-    background-color: transparent;
-    border: 1px solid transparent;
-}
-
-body::-webkit-scrollbar-thumb {
-    border-radius: 8px;
-    background-color: #dbd403;
-}
 
 @media (max-width: 768px) {
     nav li {
@@ -245,6 +225,12 @@ body::-webkit-scrollbar-thumb {
         padding: 10px;
         /* Reduza o espaço entre os itens do menu em telas menores */
     }
+}
+
+nav ul li a {
+    color: yellow;
+    font-family: Boldline;
+    font-size: 150%;
 }
 
 nav li a:hover {
@@ -298,11 +284,7 @@ nav li a:hover {
     }
 }
 
-nav ul li a {
-    color: yellow;
-    font-family: Boldline;
-    font-size: 150%;
-}
+
 
 
 
