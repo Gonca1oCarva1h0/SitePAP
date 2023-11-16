@@ -138,6 +138,11 @@ nav {
     overflow: hidden;
     color: #dbd403;
     vertical-align: top;
+    letter-spacing: 2px;
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 nav a img {
@@ -269,19 +274,27 @@ nav li a:hover {
 
 
 .jumbotron {
-    background-image: url('https://assetsio.reedpopcdn.com/borderlands-3-free-epic-games.jpg?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp');
-    background-size: cover;
+    background-image: url('https://assets.2k.com/1a6ngf98576c/2sWKORG4IQ9e7pcSWcXSB4/462e433042c33365563351df2304db0c/Warchest_Marquee_Desktop.jpg');
+    background-size: contain; 
+    background-repeat: no-repeat;
     background-position: center;
     color: white;
     text-align: center;
     padding: 100px 0;
     height: 80vh;
-
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     .jumbotron {
-        height: 60vh;
+        margin-top: 10%;
+        background-size: 700px; 
+        background-repeat: no-repeat;
+        background-position: center;
+        color: white;
+        text-align: center;
+        padding: 100px 0;
+        height: 100vh;
+        background-image: url('https://assets.2k.com/1a6ngf98576c/5e7HJnyxL5crkWQiR7RnfJ/38eff2c7b889e03351d654b61649ccd0/Warchest_Hero_Mobile.jpg'); /* Replace with the path to your small-screen image */
     }
 }
 
@@ -326,6 +339,7 @@ nav ul li a {
 #download:before {
     border: 0 solid;
     box-sizing: border-box;
+    
 }
 
 #download {
@@ -339,8 +353,9 @@ nav ul li a {
     border-width: 2px;
     overflow: hidden;
     position: relative;
-    margin-bottom: 15%;
-    margin-top: 10%;
+    margin-bottom: 10%;
+    margin-top: 5%;
+    letter-spacing: 3px;
 }
 
 @media (max-width: 768px) {
