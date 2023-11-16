@@ -1,5 +1,4 @@
 body {
-    font-family: Boldline background-color: #000000;
     margin: 0;
     padding: 0;
     background-color: black;
@@ -19,7 +18,90 @@ header h1 {
 main {
     text-align: center;
     padding: 2rem;
+    color: #dbd403;
+    font-family: boldline;
+
 }
+
+
+.textTitle {
+    font-size: 350%;
+    margin-bottom: 10px;
+    color: #dbd403;
+    font-family: Boldline;
+    text-align: center;
+}
+
+hr {
+    background-color: #dbd403;
+    height: 1px;
+    border: none;
+}
+
+
+.text {
+    font-size: 130%;
+    color: white;
+    font-family: Algoria;
+    margin: 20%;
+    text-align: justify;
+    line-height: 1.5;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-left: 20%;
+
+}
+
+.textsobre {
+    color: #dbd403;
+    text-align: justify;
+    margin-left: 20%;
+    font-family: Algoria;
+    font-weight: bold;
+}
+
+.email {
+    display: inline-block;
+    width: 50%;
+}
+
+.contactos {
+    display: inline-block;
+    width: 40%;
+
+}
+
+
+.textsobre a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.textsobre a:hover {
+    color: rgb(255, 255, 255);
+}
+
+
+
+.pfpimage {
+    height: 40%;
+    width: 20%;
+    border-radius: 100%;
+    margin-top: 3%;
+    margin-bottom: 8%;
+}
+
+.contact-info {
+    float: right;
+    text-align: right;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+    text-align: justify;
+
+}
+
 
 footer {
     background-color: #000000;
@@ -28,10 +110,43 @@ footer {
     padding: 1rem;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 nav {
     background-color: #000000;
     overflow: hidden;
-    color: #cddb03;
+    color: #dbd403;
+    vertical-align: top;
+}
+
+nav a img {
+    transition: transform 0.3s ease-in-out;
+}
+
+nav a img:hover {
+    transform: scale(1.3);
+    /* Adjust the scaling factor as needed */
 }
 
 nav ul {
@@ -59,6 +174,61 @@ nav li a:hover {
     color: white;
 }
 
+
+nav ul li.active a {
+    color: white;
+}
+
+nav ul li.active a:hover {
+    color: #dbd403;
+}
+
+nav img {
+    width: 100px;
+    height: auto;
+    position: absolute;
+    margin-top: 15px;
+    margin-left: 20px;
+    top: 0;
+    left: 0;
+}
+
+body::-webkit-scrollbar {
+    width: 12px;
+    /* Set the width of the scrollbar */
+
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #dbd403;
+    /* Set the color of the scrollbar thumb */
+}
+
+body::-webkit-scrollbar-track {
+    background: black;
+    /* Set the color of the scrollbar track */
+
+}
+
+
+
+
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    border-radius: 8%;
+    background-color: transparent;
+    border: 1px solid transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: #dbd403;
+}
+
 @media (max-width: 768px) {
     nav li {
         float: none;
@@ -77,6 +247,27 @@ nav li a:hover {
     color: white;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .jumbotron {
     background-image: url('https://assetsio.reedpopcdn.com/borderlands-3-free-epic-games.jpg?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp');
     background-size: cover;
@@ -85,13 +276,12 @@ nav li a:hover {
     text-align: center;
     padding: 100px 0;
     height: 80vh;
-    /* Ajuste a altura para 80% da altura da tela (viewport height) */
+
 }
 
 @media (max-width: 768px) {
     .jumbotron {
         height: 60vh;
-        /* Ajuste a altura para telas menores */
     }
 }
 
@@ -104,13 +294,6 @@ nav ul li a {
 
 
 
-
-
-
-
-
-
-
 @font-face {
     font-family: BlowMe;
     src: url('BlowMePersonalUseRegular-g105.ttf');
@@ -119,6 +302,11 @@ nav ul li a {
 @font-face {
     font-family: Boldline;
     src: url('Boldine Semi Rounded.ttf');
+}
+
+@font-face {
+    font-family: Algoria;
+    src: url('algorialight-nrgdj.ttf');
 }
 
 
@@ -151,6 +339,8 @@ nav ul li a {
     border-width: 2px;
     overflow: hidden;
     position: relative;
+    margin-bottom: 15%;
+    margin-top: 10%;
 }
 
 @media (max-width: 768px) {
@@ -210,7 +400,5 @@ nav ul li a {
 
 #download:hover {
     background-color: rgb(0, 0, 0);
-    /* Change the background color to black on hover */
     color: white;
-    /* Keep the text color as white on hover */
 }
