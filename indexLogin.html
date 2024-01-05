@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Download do Jogo</title>
+    <link rel="stylesheet" href="src/css/style.css">
+    <script src="src/js/scripts.js"></script>
+    <style>
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            font-size: 40px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="indexCom.html">Contacto</a></li>
+            <li><a href="indexSobre.html">Sobre</a></li>
+            <li class="active"><a href="indexLogin.html">Login</a></li>
+
+        </ul>
+        <a href="index.html"><img
+                src="https://assets.2k.com/1a6ngf98576c/2BKfXtZVcyuTTdoK6w0v3b/9fcc9fc9a973464469d0045e1685b711/Warchest_Nav_Logo.png"
+                alt="Navigation Logo">
+        </a>
+    </nav>
+
+    <header class="jumbotron">
+    </header>
+
+    <main id="inicio">
+        <form id="login-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button id="button" type="button" onclick="performLogin()">Login</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; Made By Gonçalo Carvalho</p>
+    </footer>
+
+    <script>
+        // Adicione a lógica de login aqui, por exemplo, usando JavaScript
+        function performLogin() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            // Adicione lógica de autenticação aqui, por exemplo, fazendo uma solicitação para um servidor
+            // e redirecionando o usuário para a página de download se as credenciais estiverem corretas.
+            // Por enquanto, vamos apenas exibir uma mensagem de alerta.
+            alert("Simulação de login. Usuário: " + username + ", Senha: " + password);
+        }
+    </script>
+</body>
+
+</html>
