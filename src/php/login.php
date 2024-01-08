@@ -1,39 +1,40 @@
-<?php
-include './database/db.php';
-$emptyUsernameOrPassword = '';
+<html>
 
+<head>
+    <title> Procurar</title>
+</head>
 
+<body>
+    <h2> Procurar utilizador e password </h2>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
-if ($_POST) {
+    <?php
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    if (!$username || !$password) {
+        echo 'Volte atrás e escreva o utilizador e password.';
+        exit;
+    }
+    echo '<p>Username: ' . $username . '<p>';
+    $ligax = mysqli_connect('localhost', 'root', '');
+    if (!$ligax) {
+        echo '<p> Falha na ligação.';
+        exit;
+    }
+    mysqli_select_db($ligax, 'pap');
+    $procura = "select * from users where username='" . $username . "' and password='" . $password . "'";
+    $result = mysqli_query($ligax, $procura);
+    $nregistos = mysqli_num_rows($result);
+    echo 'Nº de registos encontrados: ' . $nregistos . '<br>';
+    if ($nregistos == 1) {
+        echo 'acesso concedido<br>';
+        echo '<a href="http://www.google.pt"> Google </a> <br>';
+    } else {
+        echo 'acesso não concedido<br>';
+        echo '<a href="login.html"> Voltar ao Login </a> <br>';
+    }
+    ?>
 
-	$tabela = 'users';
+</body>
 
-	$username = $_POST['username'];
-	$password = $_POST['password'];
-
-	//print_r($_POST['password']);
-	//echo $_POST['password'];
-	if ($username && $password) {
-		$password = md5($password);
-
-		$query = "SELECT * FROM $tabela WHERE username=? AND password=?";
-		$stmt = $db->prepare($query);
-		$stmt->execute([$username, $password]);
-		$result = $stmt->fetch();
-
-
-		//echo (count($result));
-		if (count($result) > 0)
-		//if($result)
-		{
-			$_SESSION['username'] = $username;
-			$_SESSION['loggedIn'] = true;
-			exit(header("Location: menu.php"));
-		} else {
-			exit(header("Location: index.php "));
-		}
-	} else {
-		$emptyUsernameOrPassword = true;
-	}
-}
-?>
+</html>

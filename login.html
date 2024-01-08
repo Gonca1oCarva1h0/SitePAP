@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Download do Jogo</title>
     <link rel="stylesheet" href="src/css/style.css">
-    <script src="src/js/scripts.js"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -62,7 +61,7 @@
     <header class="jumbotron">
     </header>
     <main id="inicio">
-        <form id="login-form">
+        <form action="src/php/login.php" method="POST">
             <center>
                 <label for="username">Username:</label>
                 <input type="text" id="username" name="username" required>
@@ -70,22 +69,13 @@
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" required>
 
-                <button type="button" onclick="performLogin()">Login</button>
+                <input type="submit" name="submit" value="login"></input>
             </center>
         </form>
     </main>
     <footer>
         <p>&copy; Made By Gonçalo Carvalho</p>
     </footer>
-
-    <script>
-
-        function performLogin() {
-            var username = document.getElementById("username").value;
-            var password = document.getElementById("password").value;
-            alert("Simulação de login. Usuário: " + username + ", Senha: " + password);
-        }
-    </script>
 </body>
 
 </html>
