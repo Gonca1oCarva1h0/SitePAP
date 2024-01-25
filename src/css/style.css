@@ -117,8 +117,8 @@ body::-webkit-scrollbar {
 
 body::-webkit-scrollbar-track {
     border-radius: 8%;
-    background-color: transparent;
-    border: 1px solid transparent;
+    background-color: black;
+    border: 1px solid black;
 }
 
 body::-webkit-scrollbar-thumb {
@@ -169,18 +169,22 @@ nav a img:hover {
 }
 
 nav ul {
-    list-style-type: none;
+    list-style: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
 }
 
 nav li {
+
     float: right;
+    padding: 1rem;
+    position: relative;
+    text-decoration: none;
+    transition-duration: 0.5s;
 }
 
 nav li a {
-    display: block;
     color: white;
     text-align: center;
     padding: 14px 16px;
@@ -191,6 +195,7 @@ nav li a {
 nav li a:hover {
     background-color: #000000;
     color: white;
+    cursor: pointer;
 }
 
 
@@ -238,6 +243,32 @@ nav li a:hover {
     color: white;
 }
 
+ul li ul {
+    background: orange;
+    visibility: hidden;
+    opacity: 0;
+    min-width: 5rem;
+    position: absolute;
+    transition: all 0.5s ease;
+    margin-top: 1rem;
+    left: 0;
+    display: none;
+}
+
+ul li:hover>ul,
+ul li:focus-within>ul,
+ul li ul:hover,
+ul li ul:focus {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}
+
+ul li ul li {
+    clear: both;
+    width: 100%;
+}
+
 
 
 
@@ -261,7 +292,7 @@ nav li a:hover {
 
 .jumbotron {
     background-image: url('https://assets.2k.com/1a6ngf98576c/2sWKORG4IQ9e7pcSWcXSB4/462e433042c33365563351df2304db0c/Warchest_Marquee_Desktop.jpg');
-    background-size: contain; 
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     color: white;
@@ -273,14 +304,15 @@ nav li a:hover {
 @media (max-width: 1000px) {
     .jumbotron {
         margin-top: 10%;
-        background-size: 700px; 
+        background-size: 700px;
         background-repeat: no-repeat;
         background-position: center;
         color: white;
         text-align: center;
         padding: 100px 0;
         height: 100vh;
-        background-image: url('https://assets.2k.com/1a6ngf98576c/5e7HJnyxL5crkWQiR7RnfJ/38eff2c7b889e03351d654b61649ccd0/Warchest_Hero_Mobile.jpg'); /* Replace with the path to your small-screen image */
+        background-image: url('https://assets.2k.com/1a6ngf98576c/5e7HJnyxL5crkWQiR7RnfJ/38eff2c7b889e03351d654b61649ccd0/Warchest_Hero_Mobile.jpg');
+        /* Replace with the path to your small-screen image */
     }
 }
 
@@ -321,7 +353,7 @@ nav li a:hover {
 #download:before {
     border: 0 solid;
     box-sizing: border-box;
-    
+
 }
 
 #download {
@@ -359,7 +391,7 @@ nav li a:hover {
 
 #download svg {
     display: block;
-    vertical-align: middle;
+
 }
 
 #download [hidden] {
@@ -398,4 +430,25 @@ nav li a:hover {
 #download:hover {
     background-color: rgb(0, 0, 0);
     color: white;
+}
+
+
+
+
+
+
+button {
+    background-color: #000;
+    color: #dbd403;
+    padding: 10px 15px;
+    border-width: 6px;
+    border-radius: 30px;
+    border-color: #dbd403;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+button:hover {
+    background-color: #dbd403;
+    color: black;
 }
