@@ -2,6 +2,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -56,9 +58,11 @@
 <body>
     <nav>
         <ul>
-            <li><a href="indexCom.html">Contacto</a></li>
-            <li><a href="indexSobre.html">Sobre</a></li>
-            <li class="active"><a href="indexLogin.html">Login</a></li>
+            <li class="active"><a href="indexLogin.php">Login</a></li>
+            <li><a href="indexSobre.php">Sobre</a></li>
+            <li><a href="indexCom.php">Contacto</a></li>
+
+
         </ul>
         <a href="index.php"><img
                 src="https://assets.2k.com/1a6ngf98576c/2BKfXtZVcyuTTdoK6w0v3b/9fcc9fc9a973464469d0045e1685b711/Warchest_Nav_Logo.png"
@@ -69,6 +73,11 @@
 
 
     <main id="inicio">
+
+
+
+
+
         <form action="login.php" method="POST">
             <center>
                 <label for="username">Username:</label>
@@ -80,6 +89,15 @@
                 <input type="submit" name="submit" value="login"></input>
             </center>
         </form>
+
+
+        <?php
+        session_start();
+        if (isset($_SESSION['notification'])) {
+            echo '<div style="color: white; padding: 10px; border: 1px solid #dbd403; margin-bottom: 10px; font-family"; letter-spacing: 3px;>' . $_SESSION['notification'] . '</div>';
+            unset($_SESSION['notification']); // Clear the notification after displaying
+        }
+        ?>
 
         <br>
         <br>

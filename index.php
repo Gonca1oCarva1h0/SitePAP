@@ -22,19 +22,16 @@ $registrado = isset($_SESSION['registrado']) && $_SESSION['registrado'];
     <nav role="navigation">
         <ul>
             <?php if ($registrado == 1): ?>
-
+                <li><a href="perfil.php" aria-haspopup="true">Perfil</a></li>
                 <li><a href="update.html">Novidades</a></li>
+                <li><a href="logout.php">Logout</a></li>
             <?php else: ?>
-                <li><a href="indexLogin.html">Login</a></li>
+                <li><a href="indexLogin.php">Login</a></li>
             <?php endif; ?>
-            <li><a href="indexSobre.html">Sobre</a></li>
-            <li><a href="indexCom.html">Contactos</a></li>
-            <li><a href="#" aria-haspopup="true">Account</a>
-                <ul class="dropdown" aria-label="submenu">
-                    <li><a href="#">Perfil</a></li>
-                    <li><a href="#">Logout</a></li>
-                </ul>
-            </li>
+            <li><a href="indexSobrephp">Sobre</a></li>
+            <li><a href="indexCom.php">Contactos</a></li>
+
+
 
 
 
@@ -51,28 +48,63 @@ $registrado = isset($_SESSION['registrado']) && $_SESSION['registrado'];
     </header>
     <main>
 
-        <a id="download-link" download="FilipeOAventureiro.zip" style="display: none;"></a>
-        <div class="center">
-            <button id="download"><span>Download</span></button>
-        </div>
 
-        <hr>
-        <div class="textTitle">
-            <p>BORDERLANDS COLLECTION:</p>
-            <p>PANDORA'S BOX</p>
-        </div>
+        <?php if ($registrado == 1): ?>
 
-        <div class="text">
-            Get the complete Borderlands experience with this all-in-one
-            collection, including all six acclaimed base games, as well as all
-            the add-on content for Borderlands, Borderlands 2, Borderlands:
-            The Pre-Sequel, Tales from the Borderlands, Borderlands 3, and
-            New Tales from the Borderlands in one giant bundle.
-            <p></p>
-            Experience the iconic franchise that defined the looter-shooter
-            genre with its over-the-top firefights, absurdly varied arsenals,
-            and thrilling interplanetary adventures perfect for solo and co-op.
-        </div>
+            <a id="download-link" download="FilipeOAventureiro.zip" style="display: none;"></a>
+            <div class="center">
+                <button id="download"><span>Download</span></button>
+            </div>
+
+
+
+            <hr>
+
+            <div class="textTitle">
+                <p>BORDERLANDS COLLECTION:</p>
+                <p>PANDORA'S BOX</p>
+            </div>
+
+            <div class="text">
+                Get the complete Borderlands experience with this all-in-one
+                collection, including all six acclaimed base games, as well as all
+                the add-on content for Borderlands, Borderlands 2, Borderlands:
+                The Pre-Sequel, Tales from the Borderlands, Borderlands 3, and
+                New Tales from the Borderlands in one giant bundle.
+                <p></p>
+                Experience the iconic franchise that defined the looter-shooter
+                genre with its over-the-top firefights, absurdly varied arsenals,
+                and thrilling interplanetary adventures perfect for solo and co-op.
+            </div>
+
+        <?php else: ?>
+
+            <div class="textTitlel">
+                <p>BORDERLANDS COLLECTION:</p>
+                <p>PANDORA'S BOX</p>
+            </div>
+
+
+
+            <div class="textl">
+                Get the complete Borderlands experience with this all-in-one
+                collection, including all six acclaimed base games, as well as all
+                the add-on content for Borderlands, Borderlands 2, Borderlands:
+                The Pre-Sequel, Tales from the Borderlands, Borderlands 3, and
+                New Tales from the Borderlands in one giant bundle.
+                <p></p>
+                Experience the iconic franchise that defined the looter-shooter
+                genre with its over-the-top firefights, absurdly varied arsenals,
+                and thrilling interplanetary adventures perfect for solo and co-op.
+            </div>
+        <?php endif; ?>
+
+
+
+
+
+
+
     </main>
     <footer>
         <p>&copy; Made By Gonçalo Carvalho</p>

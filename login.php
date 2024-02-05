@@ -24,11 +24,13 @@ $nregistos = mysqli_num_rows($result);
 
 if ($nregistos == 1) {
     $_SESSION['registrado'] = 1;
+    $_SESSION['username'] = $username;
+    $_SESSION['password'] = $password;
     header('Location: index.php'); // Redirecione para o arquivo que contém o código HTML
     exit;
 } else {
-    // Defina a variável de sessão como false se o login falhar
     $_SESSION['registrado'] = 0;
-    header('Location: indexLogin.html');
+    $_SESSION['notification'] = 'Login falhou. Verifique o utilizador e a password.';
+    header('Location: indexLogin.php');
     exit;
 }

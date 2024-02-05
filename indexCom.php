@@ -17,9 +17,15 @@
 
     <nav>
         <ul>
-            <li class="active"><a href="indexCom.html">Contacto</a></li>
-            <li><a href="indexSobre.html">Sobre</a></li>
-            <li><a href="indexLogin.html">Login</a></li>
+            <?php if ($registrado == 1): ?>
+                <li><a href="#" aria-haspopup="true">Pefil</a></li>
+                <li><a href="update.html">Novidades</a></li>
+                <li><a href="logout.php">Logout</a></li>
+            <?php else: ?>
+                <li><a href="indexLogin.pph">Login</a></li>
+            <?php endif; ?>
+            <li><a href="indexSobre.php">Sobre</a></li>
+            <li><a class="active" href="indexCom.php">Contactos</a></li>
 
 
         </ul>

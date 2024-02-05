@@ -23,6 +23,12 @@ main {
 
 }
 
+.text a,
+.textTitlel a {
+    text-decoration: none;
+    color: inherit;
+}
+
 
 .textTitle {
     font-size: 350%;
@@ -41,6 +47,32 @@ hr {
 
 .text {
     font-size: 130%;
+    color: white;
+    font-family: Algoria;
+    margin: 20%;
+    text-align: justify;
+    line-height: 1.5;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-left: 20%;
+    text-decoration: none;
+
+}
+
+
+.textTitlel {
+    font-size: 220%;
+    margin-bottom: 10px;
+    color: #dbd403;
+    font-family: Boldline;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+
+.textl {
+    font-size: 70%;
     color: white;
     font-family: Algoria;
     margin: 20%;
@@ -169,22 +201,18 @@ nav a img:hover {
 }
 
 nav ul {
-    list-style: none;
+    list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
 }
 
 nav li {
-
     float: right;
-    padding: 1rem;
-    position: relative;
-    text-decoration: none;
-    transition-duration: 0.5s;
 }
 
 nav li a {
+    display: block;
     color: white;
     text-align: center;
     padding: 14px 16px;
@@ -195,7 +223,6 @@ nav li a {
 nav li a:hover {
     background-color: #000000;
     color: white;
-    cursor: pointer;
 }
 
 
@@ -241,32 +268,6 @@ nav ul li a {
 nav li a:hover {
     background-color: #000000;
     color: white;
-}
-
-ul li ul {
-    background: orange;
-    visibility: hidden;
-    opacity: 0;
-    min-width: 5rem;
-    position: absolute;
-    transition: all 0.5s ease;
-    margin-top: 1rem;
-    left: 0;
-    display: none;
-}
-
-ul li:hover>ul,
-ul li:focus-within>ul,
-ul li ul:hover,
-ul li ul:focus {
-    visibility: visible;
-    opacity: 1;
-    display: block;
-}
-
-ul li ul li {
-    clear: both;
-    width: 100%;
 }
 
 
@@ -370,6 +371,7 @@ ul li ul li {
     margin-bottom: 10%;
     margin-top: 5%;
     letter-spacing: 3px;
+    display: none;
 }
 
 @media (max-width: 768px) {
@@ -391,7 +393,7 @@ ul li ul li {
 
 #download svg {
     display: block;
-
+    vertical-align: middle;
 }
 
 #download [hidden] {
