@@ -4,8 +4,8 @@
 <?php
 session_start(); // Inicie a sessão
 $registrado = isset($_SESSION['registrado']) && $_SESSION['registrado'];
-$username = isset($_SESSION['username']) && $_SESSION['username'];
-$password = isset($_SESSION['password']) && $_SESSION['password'];
+$username = $_SESSION['username'];
+$password = $_SESSION['password'];
 ?>
 
 <head>

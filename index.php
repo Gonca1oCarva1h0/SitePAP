@@ -49,55 +49,34 @@ $registrado = isset($_SESSION['registrado']) && $_SESSION['registrado'];
     <main>
 
 
-        <?php if ($registrado == 1): ?>
-
-            <a id="download-link" download="FilipeOAventureiro.zip" style="display: none;"></a>
-            <div class="center">
-                <button id="download"><span>Download</span></button>
-            </div>
 
 
-
-            <hr>
-
-            <div class="textTitle">
-                <p>BORDERLANDS COLLECTION:</p>
-                <p>PANDORA'S BOX</p>
-            </div>
-
-            <div class="text">
-                Get the complete Borderlands experience with this all-in-one
-                collection, including all six acclaimed base games, as well as all
-                the add-on content for Borderlands, Borderlands 2, Borderlands:
-                The Pre-Sequel, Tales from the Borderlands, Borderlands 3, and
-                New Tales from the Borderlands in one giant bundle.
-                <p></p>
-                Experience the iconic franchise that defined the looter-shooter
-                genre with its over-the-top firefights, absurdly varied arsenals,
-                and thrilling interplanetary adventures perfect for solo and co-op.
-            </div>
-
-        <?php else: ?>
-
-            <div class="textTitlel">
-                <p>BORDERLANDS COLLECTION:</p>
-                <p>PANDORA'S BOX</p>
-            </div>
+        <a id="download-link" download="FilipeOAventureiro.zip" style="display: none;"></a>
+        <div class="center">
+            <button id="download"><span>Download</span></button>
+        </div>
 
 
 
-            <div class="textl">
-                Get the complete Borderlands experience with this all-in-one
-                collection, including all six acclaimed base games, as well as all
-                the add-on content for Borderlands, Borderlands 2, Borderlands:
-                The Pre-Sequel, Tales from the Borderlands, Borderlands 3, and
-                New Tales from the Borderlands in one giant bundle.
-                <p></p>
-                Experience the iconic franchise that defined the looter-shooter
-                genre with its over-the-top firefights, absurdly varied arsenals,
-                and thrilling interplanetary adventures perfect for solo and co-op.
-            </div>
-        <?php endif; ?>
+        <hr>
+
+        <div class="textTitle">
+            <p>BORDERLANDS COLLECTION:</p>
+            <p>PANDORA'S BOX</p>
+        </div>
+
+        <div class="text">
+            Get the complete Borderlands experience with this all-in-one
+            collection, including all six acclaimed base games, as well as all
+            the add-on content for Borderlands, Borderlands 2, Borderlands:
+            The Pre-Sequel, Tales from the Borderlands, Borderlands 3, and
+            New Tales from the Borderlands in one giant bundle.
+            <p></p>
+            Experience the iconic franchise that defined the looter-shooter
+            genre with its over-the-top firefights, absurdly varied arsenals,
+            and thrilling interplanetary adventures perfect for solo and co-op.
+        </div>
+
 
 
 
