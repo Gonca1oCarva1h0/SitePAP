@@ -30,6 +30,8 @@ main {
 }
 
 
+
+
 .textTitle {
     font-size: 350%;
     margin-bottom: 10px;
@@ -60,29 +62,7 @@ hr {
 }
 
 
-.textTitlel {
-    font-size: 220%;
-    margin-bottom: 10px;
-    color: #dbd403;
-    font-family: Boldline;
-    text-align: center;
-    text-decoration: none;
-}
 
-
-
-.textl {
-    font-size: 70%;
-    color: white;
-    font-family: Algoria;
-    margin: 20%;
-    text-align: justify;
-    line-height: 1.5;
-    font-weight: bold;
-    margin-top: 10px;
-    margin-left: 20%;
-
-}
 
 .textsobre {
     color: #dbd403;
@@ -182,11 +162,14 @@ body::-webkit-scrollbar-thumb {
 nav {
     background-color: #000000;
     overflow: hidden;
+    /* Este pode ser o problema */
     color: #dbd403;
     vertical-align: top;
     letter-spacing: 2px;
     overflow: auto;
+    /* Talvez redundante */
     position: fixed;
+    /* Pode interferir na exibição */
     top: 0;
     width: 100%;
 }
@@ -313,7 +296,6 @@ nav li a:hover {
         padding: 100px 0;
         height: 100vh;
         background-image: url('https://assets.2k.com/1a6ngf98576c/5e7HJnyxL5crkWQiR7RnfJ/38eff2c7b889e03351d654b61649ccd0/Warchest_Hero_Mobile.jpg');
-        /* Replace with the path to your small-screen image */
     }
 }
 
@@ -368,10 +350,9 @@ nav li a:hover {
     border-width: 2px;
     overflow: hidden;
     position: relative;
-    margin-bottom: 10%;
-    margin-top: 5%;
     letter-spacing: 3px;
-    display: none;
+    display: block;
+    margin: 2% auto;
 }
 
 @media (max-width: 768px) {
@@ -393,12 +374,9 @@ nav li a:hover {
 
 #download svg {
     display: block;
-    vertical-align: middle;
+
 }
 
-#download [hidden] {
-    display: none;
-}
 
 #download {
     border-radius: 99rem;

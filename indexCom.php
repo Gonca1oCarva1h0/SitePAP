@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<?php
+session_start(); // Inicie a sessão
+$registrado = isset($_SESSION['registrado']) && $_SESSION['registrado'];
+$username = $_SESSION['username'];
+$password = $_SESSION['password'];
+?>
+
+
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,7 +31,7 @@
                 <li><a href="update.html">Novidades</a></li>
                 <li><a href="logout.php">Logout</a></li>
             <?php else: ?>
-                <li><a href="indexLogin.pph">Login</a></li>
+                <li><a href="indexLogin.php">Login</a></li>
             <?php endif; ?>
             <li><a href="indexSobre.php">Sobre</a></li>
             <li><a class="active" href="indexCom.php">Contactos</a></li>

@@ -34,3 +34,11 @@ if ($nregistos == 1) {
     header('Location: indexLogin.php');
     exit;
 }
+
+
+
+
+
+
+
+

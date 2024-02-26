@@ -51,7 +51,7 @@
         $result = mysqli_query($conexao, $insere);
 
         if ($result) {
-            header("Location: indexLogin.html");
+            header("Location: indexLogin.php");
             exit;
         } else {
             header("Location: indexRegister.html");
