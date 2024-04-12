@@ -33,7 +33,7 @@
 
 
         button {
-            background-color: #dbd403;
+            background-color: #808080;
             color: black;
             font-weight: bold;
             font-size: 130%;
@@ -55,7 +55,7 @@
 
 
         a[id="Voltar"] {
-            color: #dbd403;
+            color: #white;
             font-size: 25px;
         }
     </style>
@@ -70,9 +70,8 @@
 
 
         </ul>
-        <a href="index.php"><img
-                src="https://assets.2k.com/1a6ngf98576c/2BKfXtZVcyuTTdoK6w0v3b/9fcc9fc9a973464469d0045e1685b711/Warchest_Nav_Logo.png"
-                alt="Navigation Logo"></a>
+        <a href="index.php"><img src="https://i.postimg.cc/cH7WJtg6/imagem-2024-04-08-092201859-removebg-preview.png"
+                alt="Navigation Logo" class="navbar"></a>
     </nav>
     <header class="jumbotron">
     </header>
@@ -113,6 +112,15 @@
             <button type="submit" class="submit">Registar</button>
 
             </div>
+
+
+            <?php
+            session_start();
+            if (isset($_SESSION['notification'])) {
+                echo '<div style="color: white; padding: 10px; border: 1px solid white; margin-bottom: 10px; font-family"; letter-spacing: 3px;>' . $_SESSION['notification'] . '</div>';
+                unset($_SESSION['notification']); // Clear the notification after displaying
+            }
+            ?>
 
         </form>
         <br>

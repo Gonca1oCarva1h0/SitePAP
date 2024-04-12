@@ -1,38 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <?php
 session_start(); // Inicie a sessão
 $registrado = isset($_SESSION['registrado']) && $_SESSION['registrado'];
-$username = isset($_SESSION['username']) && $_SESSION['username'];
-$password = isset($_SESSION['password']) && $_SESSION['password'];
+if ($registrado == 1):
+    $username = $_SESSION['username'];
+    $password = $_SESSION['password'];
+    $tipo = $_SESSION['tipo'];
+endif;
 ?>
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Download do Jogo</title>
-    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" type="text/css" href="src/css/style.css" />
     <script src="src/js/scripts.js"></script>
 </head>
 
 <body>
 
-
-
-
     <nav role="navigation">
         <ul>
             <?php if ($registrado == 1): ?>
                 <li>
-                    <a href="">
+                    <a href="perfil.php">
                         Bem Vindo
                         <?php echo $username; ?>
                     </a>
                 </li>
-                <li><a href="update.html">Novidades</a></li>
-                <li><a href="listar.php">listar</a></li>
-                <li><a href="logout.php">Logout</a></li>
+                <li><a href="novidades.php">Novidades</a></li>
+                <?php if ($tipo == "admin"): ?>
+                    <li><a href="listar.php">listar</a></li>
+                <?php endif; ?>
 
             <?php else: ?>
                 <li><a href="indexLogin.php">Login</a></li>
@@ -43,21 +43,19 @@ $password = isset($_SESSION['password']) && $_SESSION['password'];
         </ul>
 
         <a href="index.php" index.php" style="color: white; font-size: 30px;">
-            <img
-                src="https://assets.2k.com/1a6ngf98576c/2BKfXtZVcyuTTdoK6w0v3b/9fcc9fc9a973464469d0045e1685b711/Warchest_Nav_Logo.png"></a>
+            <img src="https://i.postimg.cc/cH7WJtg6/imagem-2024-04-08-092201859-removebg-preview.png"
+                class="navbar"></a>
     </nav>
 
-    <header class=" jumbotron">
+    <header class="jumbotron">
     </header>
 
-    <main>
+    <main id="inicio">
 
         <a id="download-link" download="FilipeOAventureiro.zip" style="display: none;"></a>
         <div class="center">
             <button id="download"><span>Download</span></button>
         </div>
-
-
 
         <hr>
 

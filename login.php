@@ -23,10 +23,13 @@ $result = mysqli_query($ligax, $procura);
 $nregistos = mysqli_num_rows($result);
 
 if ($nregistos == 1) {
+    $row = mysqli_fetch_assoc($result);
     $_SESSION['registrado'] = 1;
     $_SESSION['username'] = $username;
     $_SESSION['password'] = $password;
-    header('Location: index.php'); // Redirecione para o arquivo que contém o código HTML
+    $_SESSION['email'] = $row['email']; // Assuming 'email' is the field name in your database
+    $_SESSION['tipo'] = $row['tipo'];
+    header('Location: index.php');
     exit;
 } else {
     $_SESSION['registrado'] = 0;
@@ -34,11 +37,3 @@ if ($nregistos == 1) {
     header('Location: indexLogin.php');
     exit;
 }
-
-
-
-
-
-
-
-

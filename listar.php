@@ -1,8 +1,16 @@
 <!DOCTYPE html>
 <html>
+
+
+
 <?php
 session_start(); // Inicie a sessão
-$username = isset($_SESSION['username']) && $_SESSION['username'];
+$registrado = isset($_SESSION['registrado']) && $_SESSION['registrado'];
+if ($registrado == 1):
+    $username = $_SESSION['username'];
+    $password = $_SESSION['password'];
+    $tipo = $_SESSION['tipo'];
+endif;
 ?>
 
 
@@ -11,7 +19,27 @@ $username = isset($_SESSION['username']) && $_SESSION['username'];
 
 
 <head>
-    <title> Listar</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download do Jogo</title>
+    <link rel="stylesheet" href="src/css/style.css">
+    <script src="src/js/scripts.js"></script>
+    <style>
+        table {
+
+            font-size: 130%;
+            color: #808080;
+            font-family: Algoria;
+            margin: 20%;
+            text-align: justify;
+            line-height: 1.5;
+            font-weight: bold;
+            margin-top: 10px;
+            margin-left: 20%;
+            text-decoration: none;
+
+        }
+    </style>
 </head>
 
 <body>
@@ -21,26 +49,30 @@ $username = isset($_SESSION['username']) && $_SESSION['username'];
 
     <nav role="navigation">
         <ul>
+            <?php if ($registrado == 1): ?>
+                <li>
+                    <a href="perfil.php">
+                        Bem Vindo
+                        <?php echo $username; ?>
+                    </a>
+                </li>
+                <li><a href="novidades.php">Novidades</a></li>
+                <?php if ($tipo == "admin"): ?>
+                    <li><a href="listar.php">listar</a></li>
+                <?php endif; ?>
 
-            <li>
-                <a href="">
-                    Bem Vindo
-                    <?php echo $username; ?>
-                </a>
-            </li>
-            <li><a href="update.html">Novidades</a></li>
-            <li><a href="listar.php">listar</a></li>
-            <li><a href="logout.php">Logout</a></li>
+            <?php else: ?>
+                <li><a href="indexLogin.php">Login</a></li>
+            <?php endif; ?>
             <li><a href="indexSobre.php">Sobre</a></li>
             <li><a href="indexCom.php">Contactos</a></li>
 
         </ul>
 
         <a href="index.php" index.php" style="color: white; font-size: 30px;">
-            <img
-                src="https://assets.2k.com/1a6ngf98576c/2BKfXtZVcyuTTdoK6w0v3b/9fcc9fc9a973464469d0045e1685b711/Warchest_Nav_Logo.png"></a>
+            <img src="https://i.postimg.cc/cH7WJtg6/imagem-2024-04-08-092201859-removebg-preview.png"
+                class="navbar"></a>
     </nav>
-
     <header class=" jumbotron">
     </header>
 
@@ -57,26 +89,27 @@ $username = isset($_SESSION['username']) && $_SESSION['username'];
     $nregistos = mysqli_num_rows($result);
     ?>
 
-    <table border="1">
-        <tr>
-            <td> Email:
-            <td> Nome:
-            <td> Nascimento:
-            <td> Password:
 
-                <?php
-                for ($i = 0; $i < $nregistos; $i++) {
-                    $registo = mysqli_fetch_assoc($result);
-                    echo '<tr>';
-                    echo '<td>' . $registo['email'] . '</td>';
-                    echo '<td>' . $registo['username'] . '</td>';
-                    echo '<td>' . $registo['nascimento'] . '</td>';
-                    echo '<td>' . $registo['password'] . '</td>';
-                    echo '</tr>';
-                    echo '</p>';
-                }
-                ?>
-    </table>
+    <center>
+        <table border="1">
+            <tr>
+                <td> Email:
+                <td> Nome:
+                <td> Nascimento:
+
+                    <?php
+                    for ($i = 0; $i < $nregistos; $i++) {
+                        $registo = mysqli_fetch_assoc($result);
+                        echo '<tr>';
+                        echo '<td>' . $registo['email'] . '</td>';
+                        echo '<td>' . $registo['username'] . '</td>';
+                        echo '<td>' . $registo['nascimento'] . '</td>';
+                        echo '</tr>';
+                        echo '</p>';
+                    }
+                    ?>
+        </table>
+    </center>
 </body>
 
 </html>

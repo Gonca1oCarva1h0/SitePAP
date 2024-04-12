@@ -34,7 +34,7 @@
         }
 
         input[type="submit"] {
-            background-color: #dbd403;
+            background-color: #808080;
             color: black;
             font-weight: bold;
             font-size: 130%;
@@ -49,7 +49,7 @@
         }
 
         a[id="Voltar"] {
-            color: #dbd403;
+            color: #808080;
             font-size: 25px;
         }
     </style>
@@ -64,9 +64,8 @@
 
 
         </ul>
-        <a href="index.php"><img
-                src="https://assets.2k.com/1a6ngf98576c/2BKfXtZVcyuTTdoK6w0v3b/9fcc9fc9a973464469d0045e1685b711/Warchest_Nav_Logo.png"
-                alt="Navigation Logo"></a>
+        <a href="index.php"><img src="https://i.postimg.cc/cH7WJtg6/imagem-2024-04-08-092201859-removebg-preview.png"
+                alt="Navigation Logo" class="navbar"></a>
     </nav>
     <header class="jumbotron">
     </header>
@@ -94,17 +93,17 @@
         <?php
         session_start();
         if (isset($_SESSION['notification'])) {
-            echo '<div style="color: white; padding: 10px; border: 1px solid #dbd403; margin-bottom: 10px; font-family"; letter-spacing: 3px;>' . $_SESSION['notification'] . '</div>';
+            echo '<div style="color: white; padding: 10px; border: 1px solid #808080; margin-bottom: 10px; font-family"; letter-spacing: 3px;>' . $_SESSION['notification'] . '</div>';
             unset($_SESSION['notification']); // Clear the notification after displaying
         }
         ?>
 
         <br>
         <br>
-        <a id="Voltar" href="indexRegister.html">Registre-se aqui</a>
+        <a id="Voltar" href="indexRegister.php">Registe-se aqui</a>
     </main>
     <footer>
-        <p>&copy; Made By Gonçalo Carvalho</p>
+        <p>&copy; Feito por Gonçalo Carvalho</p>
     </footer>
 </body>
 

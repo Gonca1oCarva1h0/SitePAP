@@ -54,7 +54,8 @@
             header("Location: indexLogin.php");
             exit;
         } else {
-            header("Location: indexRegister.html");
+            $_SESSION['notification'] = 'Erro ao registar. Tente um novo username.';
+            header("Location: indexRegister.php");
             exit;
         }
     }
